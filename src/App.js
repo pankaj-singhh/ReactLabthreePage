@@ -1,25 +1,24 @@
 import logo from './logo.svg';
 import './App.css';
+import Main from './component/Main';
+import { Route, Routes } from 'react-router-dom';
+import Counter from './component/Counter';
+import Texteditor from './component/Texteditor';
+import UserForm from './component/UserForm';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div >
+     
+     <Routes>
+      <Route path='/' element={<Main/>}></Route>
+      <Route path='counter' element={<Counter />}></Route>
+      <Route path='userform' element={<UserForm />}></Route>
+      <Route path='texteditor' element={<Texteditor />}></Route>
+      </Routes>
     </div>
   );
 }
+
 
 export default App;
